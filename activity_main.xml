@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#BCB09B"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:background="#00BCD4"
+                android:freezesText="false"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Выбран"
+                android:textSize="24sp"
+                android:translationY="20pt"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="200pt"
+            android:layout_marginHorizontal="30pt"
+            android:layout_weight="1"
+            android:fadingEdge="horizontal|vertical"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/GroupButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/Python"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Python"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/Kotlin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kotlin"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/Java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Java"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/Fortran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fortran"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:onClick="onClickButtonSelect"
+                android:text="Выбрать"
+                android:textColor="@color/white"
+                android:textColorHighlight="#0A1551"
+                android:textColorLink="#004496"
+                android:textSize="24sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:gravity="center_horizontal"
+            android:inputType="datetime"
+            android:text="Time:"
+            android:textAlignment="gravity"
+            android:textSize="24sp"
+            android:format24Hour="HH:mm:ss"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
